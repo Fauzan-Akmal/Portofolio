@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Foto from "../assets/Foto.jpg";
 
 const skills = [
@@ -20,6 +20,8 @@ const projects = [
 ];
 
 export function Welcome() {
+  const [open, setOpen] = useState(false);
+
   useEffect(() => {
     const elements = document.querySelectorAll(".fade");
 
@@ -44,16 +46,33 @@ export function Welcome() {
       <header className="sticky top-0 z-50 bg-slate-950/80 backdrop-blur border-b border-slate-800">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
           <h1 className="font-semibold text-white">Fauzan</h1>
-          <nav className="flex gap-6 text-sm text-slate-400">
+
+          <nav className="hidden md:flex gap-6 text-sm text-slate-400">
             <a href="#home" className="hover:text-white transition">Home</a>
             <a href="#about" className="hover:text-white transition">About</a>
             <a href="#skills" className="hover:text-white transition">Skills</a>
             <a href="#projects" className="hover:text-white transition">Projects</a>
             <a href="#contact" className="hover:text-white transition">Contact</a>
           </nav>
-        </div>
-      </header>
 
+          <button
+            onClick={() => setOpen(!open)}
+            className="md:hidden text-slate-300 text-2xl"
+          >
+            ☰
+          </button>
+        </div>
+
+        {open && (
+          <div className="md:hidden px-6 pb-4 flex flex-col gap-4 text-slate-400">
+            <a href="#home" onClick={() => setOpen(false)} className="hover:text-white">Home</a>
+            <a href="#about" onClick={() => setOpen(false)} className="hover:text-white">About</a>
+            <a href="#skills" onClick={() => setOpen(false)} className="hover:text-white">Skills</a>
+            <a href="#projects" onClick={() => setOpen(false)} className="hover:text-white">Projects</a>
+            <a href="#contact" onClick={() => setOpen(false)} className="hover:text-white">Contact</a>
+          </div>
+        )}
+      </header>
 
       <section id="home" className="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-10 items-center fade">
         <div>
@@ -72,10 +91,9 @@ export function Welcome() {
           </a>
         </div>
 
-
         <div className="flex justify-center">
           <div className="w-64 h-64 rounded-2xl overflow-hidden border border-slate-700 transition hover:scale-105">
-           <img
+            <img
               src={Foto}
               alt="Fauzan"
               className="w-full h-full object-cover"
@@ -83,7 +101,6 @@ export function Welcome() {
           </div>
         </div>
       </section>
-
 
       <section id="about" className="bg-slate-900 py-16 fade">
         <div className="max-w-6xl mx-auto px-6">
@@ -143,7 +160,6 @@ export function Welcome() {
           </div>
         </div>
       </section>
-
 
       <section id="contact" className="bg-slate-950 py-16 fade">
         <div className="max-w-6xl mx-auto px-6">
