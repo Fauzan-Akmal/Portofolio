@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Foto from "../assets/Foto.jpg";
 
 const skills = [
   "HTML5",
@@ -74,9 +75,9 @@ export function Welcome() {
 
         <div className="flex justify-center">
           <div className="w-64 h-64 rounded-2xl overflow-hidden border border-slate-700 transition hover:scale-105">
-            <img
-              src="/foto-kamu.jpg"
-              alt="Profile"
+           <img
+              src={Foto}
+              alt="Fauzan"
               className="w-full h-full object-cover"
             />
           </div>
