@@ -19,7 +19,6 @@ const projects = [
 ];
 
 export function Welcome() {
-  // ✨ Scroll Animation
   useEffect(() => {
     const elements = document.querySelectorAll(".fade");
 
@@ -41,7 +40,6 @@ export function Welcome() {
   return (
     <main className="bg-slate-950 text-slate-200 min-h-screen">
 
-      {/* NAVBAR */}
       <header className="sticky top-0 z-50 bg-slate-950/80 backdrop-blur border-b border-slate-800">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
           <h1 className="font-semibold text-white">Fauzan</h1>
@@ -55,7 +53,7 @@ export function Welcome() {
         </div>
       </header>
 
-      {/* HERO */}
+
       <section id="home" className="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-10 items-center fade">
         <div>
           <h1 className="text-4xl font-bold mb-4 text-white">
@@ -73,7 +71,7 @@ export function Welcome() {
           </a>
         </div>
 
-        {/* FOTO */}
+
         <div className="flex justify-center">
           <div className="w-64 h-64 rounded-2xl overflow-hidden border border-slate-700 transition hover:scale-105">
             <img
@@ -85,7 +83,7 @@ export function Welcome() {
         </div>
       </section>
 
-      {/* ABOUT */}
+
       <section id="about" className="bg-slate-900 py-16 fade">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-2xl font-semibold mb-4 text-indigo-400">
@@ -97,7 +95,6 @@ export function Welcome() {
         </div>
       </section>
 
-      {/* SKILLS */}
       <section id="skills" className="bg-slate-950 py-16 fade">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-2xl font-semibold mb-6 text-cyan-400">
@@ -117,7 +114,6 @@ export function Welcome() {
         </div>
       </section>
 
-      {/* PROJECTS */}
       <section id="projects" className="bg-slate-900 py-16 fade">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-2xl font-semibold mb-6 text-pink-400">
@@ -147,7 +143,7 @@ export function Welcome() {
         </div>
       </section>
 
-      {/* CONTACT */}
+
       <section id="contact" className="bg-slate-950 py-16 fade">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-2xl font-semibold mb-4 text-amber-400">
@@ -159,7 +155,6 @@ export function Welcome() {
         </div>
       </section>
 
-      {/* FOOTER */}
       <footer className="text-center py-6 text-slate-600 text-sm">
         © 2026 Fauzan
       </footer>
