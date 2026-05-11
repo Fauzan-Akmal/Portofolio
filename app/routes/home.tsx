@@ -3,8 +3,12 @@ import { Welcome } from "../welcome/welcome";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Portofolio Saya" },
+    {
+      name: "description",
+      content:
+        "Portofolio web responsif yang dibuat dengan HTML, CSS, JavaScript native, dan Tailwind CSS.",
+    },
   ];
 }
 

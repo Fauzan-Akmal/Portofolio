@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --primary: #FCBF00;
+      --secondary: #004996;
+      --accent: #E62644;
+      --white: #FFFFFF;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 bg-white shadow-md">
+    <div class="container mx-auto flex items-center justify-between px-6 py-4">
+      <a href="#home" class="text-2xl font-bold text-secondary">MyPortfolio</a>
+      <nav class="hidden md:flex space-x-6">
+        <a href="#home" class="hover:text-primary">Home</a>
+        <a href="#about" class="hover:text-primary">About</a>
+        <a href="#skills" class="hover:text-primary">Skills</a>
+        <a href="#projects" class="hover:text-primary">Projects</a>
+        <a href="#contact" class="hover:text-primary">Contact</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden text-secondary focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="bg-secondary text-white py-20">
+    <div class="container mx-auto flex flex-col items-center text-center">
+      <img src="https://via.placeholder.com/150" alt="Profile" class="rounded-full w-40 h-40 mb-6">
+      <h1 class="text-4xl font-bold">Hi, I'm [Your Name]</h1>
+      <p class="mt-4 text-lg">A passionate web developer creating modern, responsive websites.</p>
+      <a href="#contact" class="mt-6 inline-block bg-primary text-white px-6 py-3 rounded-full hover:bg-accent">Contact Me</a>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="py-20">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold text-secondary">About Me</h2>
+      <p class="mt-4 text-lg text-gray-700">I am a web developer with a passion for building beautiful and functional websites. With expertise in HTML, CSS, JavaScript, and Tailwind CSS, I create responsive designs that provide excellent user experiences.</p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="bg-gray-100 py-20">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold text-secondary">Skills</h2>
+      <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="p-6 bg-white shadow rounded-lg">
+          <h3 class="text-lg font-semibold">HTML</h3>
+        </div>
+        <div class="p-6 bg-white shadow rounded-lg">
+          <h3 class="text-lg font-semibold">CSS</h3>
+        </div>
+        <div class="p-6 bg-white shadow rounded-lg">
+          <h3 class="text-lg font-semibold">JavaScript</h3>
+        </div>
+        <div class="p-6 bg-white shadow rounded-lg">
+          <h3 class="text-lg font-semibold">Tailwind CSS</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold text-secondary">Projects</h2>
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="p-6 bg-white shadow rounded-lg">
+          <h3 class="text-lg font-semibold">Project 1</h3>
+          <p class="mt-2 text-gray-700">Description of the project.</p>
+        </div>
+        <div class="p-6 bg-white shadow rounded-lg">
+          <h3 class="text-lg font-semibold">Project 2</h3>
+          <p class="mt-2 text-gray-700">Description of the project.</p>
+        </div>
+        <div class="p-6 bg-white shadow rounded-lg">
+          <h3 class="text-lg font-semibold">Project 3</h3>
+          <p class="mt-2 text-gray-700">Description of the project.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-secondary text-white py-20">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold">Contact Me</h2>
+      <form class="mt-8 space-y-4">
+        <input type="text" placeholder="Your Name" class="w-full p-3 rounded-lg text-gray-900">
+        <input type="email" placeholder="Your Email" class="w-full p-3 rounded-lg text-gray-900">
+        <textarea placeholder="Your Message" class="w-full p-3 rounded-lg text-gray-900"></textarea>
+        <button type="submit" class="bg-primary px-6 py-3 rounded-full hover:bg-accent">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    menuBtn.addEventListener('click', () => {
+      alert('Mobile menu functionality can be added here.');
+    });
+  </script>
+</body>
+</html>
