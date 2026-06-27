@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Foto from "../assets/foto.jpeg";
+import Foto from "../assets/Foto.jpeg";
 
 const skills = [
   "HTML",
