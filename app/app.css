@@ -42,3 +42,129 @@ body {
     @apply opacity-100 translate-y-0;
   }
 }
+@theme {
+  --animate-shimmer: shimmer 2.5s infinite;
+}
+
+@keyframes shimmer {
+  from {
+    transform: translateX(-250%) skewX(-12deg);
+  }
+  to {
+    transform: translateX(250%) skewX(-12deg);
+  }
+}
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(60px, -40px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes floatReverse {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-60px, 40px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes floatSlow {
+  0% {
+    transform: translate(-20px, 20px);
+  }
+
+  50% {
+    transform: translate(20px, -20px);
+  }
+
+  100% {
+    transform: translate(-20px, 20px);
+  }
+}
+
+.animate-float {
+  animation: float 15s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: floatReverse 18s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: floatSlow 22s ease-in-out infinite;
+}
+.aurora {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(120px);
+  opacity: 0.3;
+}
+
+.aurora-1 {
+  width: 500px;
+  height: 500px;
+  background: #6366f1;
+  top: -100px;
+  left: -100px;
+  animation: aurora1 18s ease-in-out infinite alternate;
+}
+
+.aurora-2 {
+  width: 600px;
+  height: 600px;
+  background: #06b6d4;
+  bottom: -200px;
+  right: -100px;
+  animation: aurora2 22s ease-in-out infinite alternate;
+}
+
+.aurora-3 {
+  width: 400px;
+  height: 400px;
+  background: #8b5cf6;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: aurora3 20s ease-in-out infinite alternate;
+}
+
+@keyframes aurora1 {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(180px, 100px);
+  }
+}
+
+@keyframes aurora2 {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-150px, -120px);
+  }
+}
+
+@keyframes aurora3 {
+  from {
+    transform: translate(-50%, 0);
+  }
+  to {
+    transform: translate(-35%, -100px);
+  }
+}

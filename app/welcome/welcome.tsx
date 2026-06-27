@@ -1,20 +1,28 @@
 import { useEffect, useState } from "react";
-import Foto from "../assets/Foto.jpg";
+import Foto from "../assets/foto.jpeg";
 
 const skills = [
-  "HTML5",
-  "CSS3",
+  "HTML",
+  "CSS",
   "JavaScript",
   "Tailwind",
   "React",
   "Responsive Design",
+  "C#",
+  "C++",
 ];
 
 const projects = [
   {
     name: "Portfolio Website",
     desc: "Website portofolio modern dan clean",
-    github: "#",
+    github: "https://github.com/Fauzan-Akmal/catatan.git",
+    live: "https://portofolio-theta-amber.vercel.app",
+  },
+  {
+    name: "Endfield industries Group Project",
+    desc: "Website untuk perusahaan Endfield industries Menjual produk-produk yang mereka buat",
+    github: "https://github.com/Fauzan-Akmal/endfield-frontend-test-push.git",
     live: "#",
   },
 ];
@@ -41,11 +49,16 @@ export function Welcome() {
   }, []);
 
   return (
-    <main className="bg-slate-950 text-slate-200 min-h-screen">
+    <main className="relative bg-slate-950 text-slate-200 min-h-screen overflow-hidden">
+      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+        <div className="aurora aurora-1"></div>
+        <div className="aurora aurora-2"></div>
+        <div className="aurora aurora-3"></div>
+      </div>
 
       <header className="sticky top-0 z-50 bg-slate-950/80 backdrop-blur border-b border-slate-800">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-          <h1 className="font-semibold text-white">Fauzan</h1>
+          <h1 className="font-semibold text-white">Portofolio</h1>
 
           <nav className="hidden md:flex gap-6 text-sm text-slate-400">
             <a href="#home" className="hover:text-white transition">Home</a>
@@ -61,6 +74,11 @@ export function Welcome() {
           >
             ☰
           </button>
+          <div className="fixed inset-0 overflow-hidden pointer-events-none">
+          <div className="aurora aurora-1"></div>
+          <div className="aurora aurora-2"></div>
+          <div className="aurora aurora-3"></div>
+        </div>
         </div>
 
         {open && (
@@ -77,10 +95,10 @@ export function Welcome() {
       <section id="home" className="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-10 items-center fade">
         <div>
           <h1 className="text-4xl font-bold mb-4 text-white">
-            Hi, I'm Fauzan 👋
+            Hi, I'm Akmal👋
           </h1>
           <p className="text-slate-400 mb-6">
-            Frontend Developer yang fokus pada UI modern dan responsive.
+            UI/UX Designer and Frontend Developer yang fokus pada UI modern dan responsive.
           </p>
 
           <a
@@ -92,14 +110,17 @@ export function Welcome() {
         </div>
 
         <div className="flex justify-center">
-          <div className="w-64 h-64 rounded-2xl overflow-hidden border border-slate-700 transition hover:scale-105">
+          <div className="relative w-55 h-55 rounded-full overflow-hidden border border-gray-200 shadow-[0_0_30px_rgba(252,191,0,0.4)] hover:shadow-[0_0_50px_rgba(252,191,0,0.7)] transition-all duration-500">
             <img
               src={Foto}
-              alt="Fauzan"
+              alt="Portofolio"
               className="w-full h-full object-cover"
             />
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full animate-[shimmer_2.5s_infinite] skew-x-12">
+            </div>
           </div>
         </div>
+
       </section>
 
       <section id="about" className="bg-slate-900 py-16 fade">
@@ -108,7 +129,7 @@ export function Welcome() {
             About
           </h2>
           <p className="text-slate-400 max-w-xl">
-            Saya membangun website yang clean, cepat, dan mudah digunakan dengan teknologi modern.
+            Saya designer Poster dan UI/UX yang membangun website yang clean, cepat, dan mudah digunakan dengan teknologi modern dan saya berkomitmen untuk memberikan pengalaman pengguna yang terbaik.
           </p>
         </div>
       </section>
@@ -169,11 +190,14 @@ export function Welcome() {
           <p className="text-slate-400">
             fauzanakmalrgt@students.amikom.ac.id
           </p>
+          <p className="text-slate-400">
+            +62 822-8233-0306
+          </p>
         </div>
       </section>
 
       <footer className="text-center py-6 text-slate-600 text-sm">
-        © 2026 Fauzan
+        © 2026 Fauzan Akmal - All rights reserved.
       </footer>
     </main>
   );
